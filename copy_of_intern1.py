@@ -2340,7 +2340,7 @@ import os
 ngrok.kill()
 
 # Set NGROK auth token directly
-NGROK_AUTH_TOKEN = "35sVkhBzyFjyrBj3vQOtSL5h8sk_6CmWqusR9rTjJ27zrkhcj"
+NGROK_AUTH_TOKEN = os.environ.get("NGROK_TOKEN", "")
 ngrok.set_auth_token(NGROK_AUTH_TOKEN)
 
 # Define the path to your Streamlit app file
@@ -2593,7 +2593,7 @@ print(f"✅ Streamlit app saved at: {STREAMLIT_APP_FILE}")
 
 # --- 6. Launch Streamlit with ngrok ---
 ngrok.kill()
-NGROK_AUTH_TOKEN = "35sVkhBzyFjyrBj3vQOtSL5h8sk_6CmWqusR9rTjJ27zrkhcj"
+NGROK_AUTH_TOKEN = os.environ.get("NGROK_TOKEN", "")
 ngrok.set_auth_token(NGROK_AUTH_TOKEN)
 
 # Run Streamlit
@@ -6946,7 +6946,7 @@ import shutil
 # (Assuming `!pip install pyngrok` and `ngrok.set_auth_token` have been run successfully in previous cells)
 
 # Set NGROK auth token explicitly within this cell
-NGROK_AUTH_TOKEN = "35sVkhBzyFjyrBj3vQOtSL5h8sk_6CmWqusR9rTjJ27zrkhcj"  # Use your actual ngrok auth token
+NGROK_AUTH_TOKEN = os.environ.get("NGROK_TOKEN", "")  # Use your actual ngrok auth token
 ngrok.set_auth_token(NGROK_AUTH_TOKEN)
 
 # 2. Manually download and configure ngrok executable if it's missing or failing to auto-download
